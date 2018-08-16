@@ -27,10 +27,25 @@ class PracticalTestingUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+//    func testThatSettingsButtonIsDisabledOnLaunch() {
+//        let app = XCUIApplication()
+//        XCTAssertFalse(app.navigationBars["Interesting Photos"].buttons["settingsIcon"].isEnabled)
+//
+
+    func testThatSettingsButtonIsEnabledAfterDataLoad() {
+        let app = XCUIApplication()
+        let rightBarButton = app.navigationBars["Interesting Photos"].buttons["settingsIcon"]
+        let isEnabled = NSPredicate(format: "isEnabled == true")
+
+
+        expectation(for: isEnabled, evaluatedWith: rightBarButton, handler: nil)
+
+        waitForExpectations(timeout: 3.0) { (error) in
+
+        }
+
     }
+
     
 }

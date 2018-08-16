@@ -7,7 +7,25 @@
 		<key>PracticalTesting.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>12</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CD4BA4302019D000000542C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD4BA4442019D000000542C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD4BA44F2019D001000542C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

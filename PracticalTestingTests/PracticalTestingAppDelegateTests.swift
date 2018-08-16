@@ -1,5 +1,5 @@
 //
-//  PracticalTestingTests.swift
+//  PracticalTestingAppDelegateTests.swift
 //  PracticalTestingTests
 //
 //  Created by Seyfeddin Bassarac on 25/01/2018.
@@ -7,9 +7,10 @@
 //
 
 import XCTest
+
 @testable import PracticalTesting
 
-class PracticalTestingTests: XCTestCase {
+class PracticalTestingAppDelegateTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +22,16 @@ class PracticalTestingTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testThatRootControllerIsCorrect() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+        XCTAssertTrue(appDelegate.window?.rootViewController is UINavigationController)
+
+        let navController = appDelegate.window?.rootViewController as! UINavigationController
+
+        XCTAssertTrue(navController.topViewController is PhotosViewController)
+
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+
     
 }

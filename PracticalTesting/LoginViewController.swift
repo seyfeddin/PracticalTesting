@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  PracticalTesting
 //
 //  Created by Seyfeddin Bassarac on 25/01/2018.
@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +25,3 @@ class ViewController: UIViewController {
 
 
 }
-
